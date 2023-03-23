@@ -1,0 +1,22 @@
+.header{
+    font-family:"Proxima Nova";
+    font-size: 26px;
+    font-weight:500;
+    text-align: left;
+}
+.rebranding_block h6{
+    color:white;
+}
+
+.rebranding_block h5{
+    color:white
+}
+.rebranding_block{
+    display:block;
+    color: black;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding: 2.5rem 1rem;
+    background-color:rgb(47, 47, 47)
+}
+
