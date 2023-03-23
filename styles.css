@@ -364,3 +364,15 @@ footer{
         height: auto;
         object-fit:scale-down;
       }
+
+
+@media only screen and (min-width: 601px){
+.h1{
+  margin: 2rem;  
+}
+.headshot{
+    border-radius: 6rem 1rem 6rem 1rem;
+    width: 320px;
+    margin: 1rem auto;
+}
+}
