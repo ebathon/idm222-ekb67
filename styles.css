@@ -57,7 +57,7 @@ h1{
 h2{
 font-family: 'Proxima Nova';
 font-style: normal;
-font-weight: 700;
+font-weight: 500;
 font-size: 36px;
 line-height: 36px;
 text-align: center;   
@@ -78,7 +78,7 @@ h4{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 116.5%;  
+    line-height: 125%;  
 }
 
 h5{
@@ -88,42 +88,34 @@ h5{
     color:#000000;
     line-height: 36px; 
 }
-.project-heading{color:aquamarine}
-h6{
+.amtrak-container #project-heading{
     display:block;
-    font-family:'Proxima Nova';
-    font-size: 20px;
-    font-weight:400;
-    line-height: 36px;
     color:#2e2e2e; 
+    padding:100px;
 }
 
+ 
 
 .headshot {
     display:flex;
-    height:auto;
-    width:100%;
     margin-left:auto;
     margin-right: auto;
     width: 50%;
     position:relative;
     padding: 1rem
 }
-
-.amtrak{
-    position: relative;
-    display:block;
-    margin-left:auto;
-    margin-right: auto;
-    width: 50%; 
+.portfolio-layout a{
+    text-decoration: none;
+    color:#000;   
 }
+
 .amtrak_square{
-    display:block;
+    /*display:block;*/
     text-align: center;
     margin-top:1rem;
     margin-bottom:1rem;
     padding: 2.5rem 1rem;
-    background:linear-gradient(180deg, rgba(0, 44, 83, 0.8) 0%, rgba(217, 217, 217, 0) 100%);
+    background:none /*linear-gradient(180deg, rgba(0, 44, 83, 0.8) 0%, rgba(217, 217, 217, 0) 100%);*/
 }
 
 .amtrak_square h5{
@@ -131,27 +123,20 @@ h6{
 }
 
 .nova_square{
-    display:block;
+    /*display:block;*/
     text-align: center;
-    color: black;
     margin-top:1rem;
     margin-bottom:1rem;
     padding: 2.5rem 1rem;
-    background: linear-gradient(180deg, rgba(172, 246, 45, 0.8) 0%, rgba(217, 217, 217, 0) 100%);
+    background: none /*linear-gradient(180deg, rgba(172, 246, 45, 0.8) 0%, rgba(217, 217, 217, 0) 100%);*/
 }
 
-.Nova{
-    display:block;
-    margin-left:auto;
-    margin-right: auto;
-    width: 50%;
-}
-.desktop_square{
+.nova-desktop{
     display:block;
     text-align: center;
     margin-top:1rem;
     padding: 2.5rem 1rem;
-    background: linear-gradient(180deg, rgba(167, 140, 209, 0.8) 0%, rgba(217, 217, 217, 0) 100%);
+    background: none /*linear-gradient(180deg, rgba(167, 140, 209, 0.8) 0%, rgba(217, 217, 217, 0) 100%);*/
 }
 
 .Novad{
@@ -161,7 +146,9 @@ h6{
     width: 75%;
     padding:1rem
 }
-
+.date{
+    margin:2rem;
+}
 footer{
     position:flex;
     bottom: 0;
@@ -259,18 +246,30 @@ footer{
 .contact h3{
     margin-bottom: 3rem;
 }
+/*-------uxportfolio.html----*/
+.portfolio-title{
+    margin:4rem 2rem 1rem 2rem;
+}
+/*-------amtrak.html----*/
+.amtrak-container{
+    border: 3rem;
+    display:flex;
+    padding: 50px;
+}
+.project-heading{
+    margin: 2rem;
+}
 
 /*--------SlideShow---------*/
 
 .slideshow-container {
-    position: flex;
+    align-items: center;
     width: 100%;
     height: 500px;
     overflow: hidden;
   }
   
   .slide {
-    position:relative;
     align-items: center;
     top: 0;
     left: 0;
@@ -313,7 +312,9 @@ footer{
 
 
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+
+    /*responsive nav bar*/
     nav {
             flex-direction: column;
           }
@@ -325,54 +326,87 @@ footer{
             padding: 0.5rem 0;
           }
     }
-    .intro-info{
-        display:inline-block
-    }
-.intro-st{
+
+.introduction{
     padding: 0.5rem;
-    margin: 2rem;
+    margin: 2rem 1rem 0.5rem 1rem;
     }
-
+.introduction h1{
+    font-size: 1.75rem;
+}
+.introduction h4{
+    font-size: smaller;
+}
 .headshot {
-    border-radius: 6rem 1rem 6rem 1rem;
-    width: 50% vw;
-    margin: 1rem auto;
+    /*border-radius: 2rem 1rem 4rem 1rem;*/
+    width: 60%;
 }
-.h1{
-    font-size: 1.5 rem;
+.portfolio-layout h2{
+font-size: 28px;
+font-weight:500;
+}
+.portfolio-layout img{
+    position: relative;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%; 
+}
+.fashion-nova-container{
+    padding: 10px;
+}
+.title h2{
+    font-size: 24px;
+    margin-top: 0.5rem;
+}
+.date h3{
+    font-size: smaller;
 }
 
-    .slideshow-container {
-        position: relative;
-        width: 320px;
-        height: auto;
-        overflow: hidden;
-      }
-      
-      .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 320px;
-        height: auto;
-        opacity: 0;
-        transition: opacity 1s ease;
-      }
-      
-      .slide img {
-        width: 320px;
-        height: auto;
-        object-fit:scale-down;
-      }
+
+/*-----slideshow---*/
+
+.nova-container {
+    display: grid;
+  }
+  
+.nova-container img{
+    max-width:500px;
+}
+     
 
 
 @media only screen and (min-width: 601px){
-.h1{
-  margin: 2rem;  
+ .intro-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:4rem 2rem 4rem 2rem;
+      }
+      
+      .headshot {
+        max-width: 300px;
+      }
+      
+      .introduction {
+        font-size: 28px;
+        padding-left: 20px;
+      }
+
+      .portfolio-layout {
+        display: grid;
+        align-items: center; 
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+        margin-bottom: 2rem;
+       }
 }
-.headshot{
-    border-radius: 6rem 1rem 6rem 1rem;
-    width: 320px;
-    margin: 1rem auto;
-}
-}
+@media only screen and (min-width: 1000px){
+    .portfolio-layout {
+        display: grid;
+        align-self:center; 
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 5px;
+       }
+       
+    }
